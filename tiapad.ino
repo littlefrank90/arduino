@@ -86,8 +86,8 @@ TKey key[NUMBER_OF_KEYS] = {
 // fila sotto
   {.pin =  9, .type = KEYBOARD, .state = INACTIVE, .stateStartMs = 0, .modificatorKeys = {}, .action = {{.durationMs = 0, .key = {KEY_LEFT_ALT, KEY_INSERT}}}}, //toggle discord deafen
   {.pin =  8, .type = KEYBOARD, .state = INACTIVE, .stateStartMs = 0, .modificatorKeys = {}, .action = {{.durationMs = 0, .key = {KEY_LEFT_CTRL, KEY_INSERT}}}}, //toggle discord streaming
-  {.pin =  7, .type = KEYBOARD, .state = INACTIVE, .stateStartMs = 0, .modificatorKeys = {}, .action = {{.durationMs = 0, .key = {}}}}, // RIASSEGNARE
-  {.pin =  6, .type = KEYBOARD, .state = INACTIVE, .stateStartMs = 0, .modificatorKeys = {}, .action = {{.durationMs = 0, .key = {}}}}, // RIASSEGNARE
+  {.pin =  7, .type = KEYBOARD, .state = INACTIVE, .stateStartMs = 0, .modificatorKeys = {}, .action = {{.durationMs = 0, .key = {KEY_LEFT_GUI, KEY_2}}}}, // open taskbar 2, aka chrome
+  {.pin =  6, .type = KEYBOARD, .state = INACTIVE, .stateStartMs = 0, .modificatorKeys = {}, .action = {{.durationMs = 0, .key = {KEY_LEFT_GUI, KEY_LEFT_CTRL, KEY_V}}}}, // switch audio device in win11
 };
 
 // Actions for rotary encoder are later in the code (search for ROTARY_ACTIONS)
