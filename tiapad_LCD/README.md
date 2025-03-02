@@ -1,6 +1,7 @@
 # TIAPAD LCD
 ## Introduction
 TIAPAD LCD is a completely open source macropad featuring a 16x2 LCD, a rotary encoder knob for controls and menu navigation and 4 buttons.
+
 [Printables link](https://github.com/littlefrank90/arduino/tree/main/tiapad_LCD#tiapad-lcd)
 
 ![photo1](https://raw.githubusercontent.com/littlefrank90/arduino/refs/heads/main/tiapad_LCD/photo1.jpg)
