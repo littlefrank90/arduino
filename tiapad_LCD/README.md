@@ -8,7 +8,6 @@ TIAPAD LCD is a completely open source macropad featuring a 16x2 LCD, a rotary e
 
 ## What you need
 The part list is rather short and self-explanatory (source: AliExpress):
-* [4 keycaps](https://it.aliexpress.com/w/wholesale-keycaps.html?spm=a2g0o.home.search.0)
 * [4 mechanical switches](https://it.aliexpress.com/item/1005002378701948.html?spm=a2g0o.order_list.order_list_main.27.112e3696PeCfgK&gatewayAdapt=glo2ita)
 * [Arduino pro micro/Leonardo](https://it.aliexpress.com/item/32846843498.html?spm=a2g0o.order_list.order_list_main.134.112e3696PeCfgK&gatewayAdapt=glo2ita)
 * [LCD 1602](https://it.aliexpress.com/item/1005006964073869.html?spm=a2g0o.order_list.order_list_main.21.112e3696PeCfgK&gatewayAdapt=glo2ita)
@@ -21,6 +20,8 @@ DOWNLOAD STL FILES HERE:
 * [Main shell](tiapad_LCD.stl) - Print this laying down on its bottom and use supports for best results.
 * [Lid](tiapad_LCD_lid.stl)
 * [Rotary encoder knob](rotary_encoder_knob.stl) - Print on its head, with the hole on the top.
+* [Keycaps - F1-F4 keys](keycaps_tiapad_lcd_f1_f4.stl) - print 2
+* [Keycaps - F2-F3 keys](keycaps_tiapad_lcd_f2_f3.stl) - print 2
 
 ## Assembly instructions
 - Start by soldering what will be the positives of your switches to a piece of wire, possibly with a dupont connector on the opposite side (the one that goes to the arduino). Do the same for all the GND.
@@ -34,6 +35,7 @@ It will not be easy to solder wires on the switches' pins once when they are ins
 - For the rest of the connections follow the schematics below
 - Once you are done putting everything together you can use a hot glue gun and put a generous drop near the USB-c slot, there's a rectangular notch that should help align the arduino pcb.
 - later, when you're sure you're done with the wiring, you can close the lid just by pushing it in place.
+- push the 3d printed keycaps on the switches
 
 It should look something like this:
 ![photo3](https://raw.githubusercontent.com/littlefrank90/arduino/refs/heads/main/tiapad_LCD/photo3.jpg)
