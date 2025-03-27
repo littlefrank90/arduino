@@ -36,6 +36,7 @@ It will not be easy to solder wires on the switches' pins once when they are ins
 - Once you are done putting everything together you can use a hot glue gun and put a generous drop near the USB-c slot, there's a rectangular notch that should help align the arduino pcb.
 - later, when you're sure you're done with the wiring, you can close the lid just by pushing it in place.
 - push the 3d printed keycaps on the switches
+- behind the LCD there should be a contrast screw. Remember to turn this and adjust your contrast once you uploaded the code to the arduino.
 
 It should look something like this:
 ![photo3](https://raw.githubusercontent.com/littlefrank90/arduino/refs/heads/main/tiapad_LCD/photo3.jpg)
