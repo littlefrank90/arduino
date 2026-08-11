@@ -8,9 +8,9 @@
 
 // Button pins
 #define BUTTON1 10  // First button pin
-#define BUTTON2 14  // Second button pin
-#define BUTTON3 15  // Third button pin
-#define BUTTON4 16  // Fourth button pin
+#define BUTTON2 16  // Second button pin
+#define BUTTON3 14  // Third button pin
+#define BUTTON4 15  // Fourth button pin
 
 // LCD setup (0x27 is the typical I2C address, adjust if needed)
 LiquidCrystal_I2C lcd(0x27, 16, 2);  // Set the LCD address to 0x27 for a 16 chars and 2 line display
@@ -127,7 +127,7 @@ void updateMenu() {
   // Check if the rotary encoder has rotated
   if (currentStateCLK != lastStateCLK && currentStateCLK == LOW) {
     userActivityDetected();
-    if (digitalRead(PIN_DT) != currentStateCLK) {
+    if (digitalRead(PIN_DT) == currentStateCLK) {
       // Clockwise rotation
       currentMenu = (MenuItem)((currentMenu + 1) % 4);
     } else {
@@ -281,9 +281,9 @@ void performActions(MenuItem currentMenu) {
   //TO CHANGE KEYBINDINGS, EDIT THE BUTTON ASSIGNMENTS IN THE FOLLOWING SWITCH STATEMENT.
   switch (currentMenu) {
     case MEDIA:
-      // === ROTARY ENCODER (unchanged) ===
+      // === ROTARY ENCODER ===
       if (currentStateCLK != lastStateCLK && currentStateCLK == LOW) {
-        if (digitalRead(PIN_DT) != currentStateCLK) {
+        if (digitalRead(PIN_DT) == currentStateCLK) {
           // Clockwise rotation
           Serial.println("vol +");
           showPopupMessage("vol +");
@@ -347,9 +347,9 @@ void performActions(MenuItem currentMenu) {
       break;
 
     case DISCORD:
-      // === ROTARY ENCODER (unchanged) ===
+      // === ROTARY ENCODER ===
       if (currentStateCLK != lastStateCLK && currentStateCLK == LOW) {
-        if (digitalRead(PIN_DT) != currentStateCLK) {
+        if (digitalRead(PIN_DT) == currentStateCLK) {
           // Clockwise rotation
           Serial.println("vol +");
           showPopupMessage("vol +");
@@ -422,9 +422,9 @@ void performActions(MenuItem currentMenu) {
       break;
 
     case WEB:
-      // === ROTARY ENCODER (unchanged) ===
+      // === ROTARY ENCODER ===
       if (currentStateCLK != lastStateCLK && currentStateCLK == LOW) {
-        if (digitalRead(PIN_DT) != currentStateCLK) {
+        if (digitalRead(PIN_DT) == currentStateCLK) {
           // Clockwise rotation
           Serial.println("scroll down");
           showPopupMessage("scroll down");
@@ -494,7 +494,7 @@ void performActions(MenuItem currentMenu) {
       break;
 
     case GAMES:
-      // === ROTARY ENCODER (unchanged) ===
+      // === ROTARY ENCODER ===
       if (currentStateCLK != lastStateCLK && currentStateCLK == LOW) {
         if (digitalRead(PIN_DT) != currentStateCLK) {
           // Clockwise rotation
