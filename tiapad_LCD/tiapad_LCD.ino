@@ -367,30 +367,36 @@ void performActions(MenuItem currentMenu) {
 
       // === BUTTON HANDLING ===
 
-      //F1
+      //F1 - Attiva/disattiva microfono (CTRL+SHIFT+M)
       if (button1State == LOW && lastButton1State == HIGH) {
         if (millis() - lastDebounceTime > debounceDelay) {
           Serial.println("Toggle mic mute");
           showPopupMessage("Discord mic mute");
-          Keyboard.press(KEY_RIGHT_CTRL);
-          Keyboard.press(KEY_INSERT);
+          Keyboard.press(KEY_LEFT_CTRL);
+          Keyboard.press(KEY_LEFT_SHIFT);
+          Keyboard.press(KEY_M);
+          delay(100);
           Keyboard.releaseAll();
           userActivityDetected();
         }
       }
       lastButton1State = button1State;
-      //F2
+
+      //F2 - Silenzia/riattiva audio (CTRL+SHIFT+D)
       if (button2State == LOW && lastButton2State == HIGH) {
         if (millis() - lastDebounceTime > debounceDelay) {
           Serial.println("Toggle deafen");
           showPopupMessage("Discord deafen");
-          Keyboard.press(KEY_LEFT_ALT);
-          Keyboard.press(KEY_INSERT);
+          Keyboard.press(KEY_LEFT_CTRL);
+          Keyboard.press(KEY_LEFT_SHIFT);
+          Keyboard.press(KEY_D);
+          delay(100);
           Keyboard.releaseAll();
           userActivityDetected();
         }
       }
       lastButton2State = button2State;
+
       //F3
       if (button3State == LOW && lastButton3State == HIGH) {
         if (millis() - lastDebounceTime > debounceDelay) {
