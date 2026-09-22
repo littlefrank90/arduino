@@ -372,9 +372,8 @@ void performActions(MenuItem currentMenu) {
         if (millis() - lastDebounceTime > debounceDelay) {
           Serial.println("Toggle mic mute");
           showPopupMessage("Discord mic mute");
-          Keyboard.press(KEY_LEFT_CTRL);
-          Keyboard.press(KEY_LEFT_SHIFT);
-          Keyboard.press(KEY_M);
+          Keyboard.press(KEY_RIGHT_CTRL);
+          Keyboard.press(KEY_INSERT);
           delay(100);
           Keyboard.releaseAll();
           userActivityDetected();
@@ -387,9 +386,8 @@ void performActions(MenuItem currentMenu) {
         if (millis() - lastDebounceTime > debounceDelay) {
           Serial.println("Toggle deafen");
           showPopupMessage("Discord deafen");
-          Keyboard.press(KEY_LEFT_CTRL);
-          Keyboard.press(KEY_LEFT_SHIFT);
-          Keyboard.press(KEY_D);
+          Keyboard.press(KEY_LEFT_ALT);
+          Keyboard.press(KEY_INSERT);
           delay(100);
           Keyboard.releaseAll();
           userActivityDetected();
