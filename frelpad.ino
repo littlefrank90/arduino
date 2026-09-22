@@ -99,7 +99,7 @@ const ButtonAction BUTTON_ACTIONS[] = {
   { ACTION_KEY_COMBO, KEY_RIGHT_CTRL,   KEY_INSERT, MEDIA_VOLUME_UP },   // D7 - pulsante 2: DISCORD MUTE
   { ACTION_KEY_COMBO, KEY_LEFT_ALT,  KEY_INSERT, MEDIA_VOLUME_UP },   // D8 - pulsante 3: DISCORD DEAFEN
   { ACTION_MEDIA_KEY, NO_MODIFIER,    NO_MODIFIER, MEDIA_NEXT },       // D15 - pulsante 4: Next track
-  { ACTION_KEY_COMBO, KEY_LEFT_CTRL,    NO_MODIFIER, MEDIA_PREVIOUS }    // D16 - pulsante 5: DISCORD STREAMING
+  { ACTION_KEY_COMBO, KEY_LEFT_CTRL,    KEY_INSERT, MEDIA_PREVIOUS }    // D16 - pulsante 5: DISCORD STREAMING
 };
 
 // Encoder: rotazione -> volume, click -> play/pausa
